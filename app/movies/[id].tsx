@@ -2,7 +2,8 @@ import { fetchMovies } from "@/services/api";
 import useFetch from "@/services/useFetch";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const MovieDetails = () => {
   const {
@@ -16,9 +17,9 @@ const MovieDetails = () => {
   );
   const { id } = useLocalSearchParams();
   return (
-    <View>
+    <SafeAreaView>
       <Text>{id}</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
